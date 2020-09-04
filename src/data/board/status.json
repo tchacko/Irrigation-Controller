@@ -1,0 +1,12 @@
+{"board": {
+	"uid":"123456-ASDF12-12343CVB",
+	"auth-key":"ABCD12345DFFFF",
+	"org-id":"1234567890",
+	"device-name":"controllerA",
+	"device-version":"PI_2",
+	"device-type":"Rpi08",
+	"status":"Registered",
+	"service-interval":"2",
+	"software-release":"1.0.1"
+	}
+}

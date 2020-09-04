@@ -1,0 +1,25 @@
+{ "controller": {
+		"status":"New",
+		"id":"",
+		"board": [
+		{
+			"id":"",
+			"status": "In Service",
+			"device": [
+			{
+				"id":"",
+				"status":"In Service",
+				"channel": [
+				{
+					"number":"3",
+					"type":"io",
+					"status":"running",
+					"start_time":"120987567890",
+					"duration":"013030",
+					"remaining":"013030",
+					"reason":"normal_run/user_stopped/monitor_n_stopped/timer_expired"
+				}]
+			}]
+		}]
+	}
+}

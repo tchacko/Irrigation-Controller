@@ -1,0 +1,6 @@
+{"connection": {
+	"ssl-enabled":"true",
+	"cert-file":"/data/system/server.cert",
+	"ciphers":""
+    }
+}

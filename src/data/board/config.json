@@ -1,0 +1,129 @@
+{"controller": {             
+	"id":"123456",
+	"custid":"9878999",
+	"authkey":"authkey01",
+	"regid":"zaSfryhft",
+	"board": [ 
+	{ 
+		"mode":"1",
+		"enabled":"true",
+		"id":"1",
+		"device": [ 
+		{
+			"groupid":"1",
+			"enabled":"false",
+			"id":"1",
+			"device-action": {
+				"trigger-value":"low",
+				"manual-trigger":"enabled",
+				"schedule-trigger":"disabled",
+				"resume-on-power-on":"true",
+				"sensor": {
+					"trigger":[
+					{
+						"description":"when sensor one goes low, trigger high on device",
+						"id":"1",
+						"group":"internal",
+						"sensor":"33",
+						"trigger-value":"low",
+						"target-value":"high"
+					},
+					{
+						"description":"desc1",
+						"id":"2",
+						"group":"internal",
+						"sensor":"2",
+						"trigger-value":"low",
+						"target-value":"high"					
+					}]
+				}	
+			},
+			"schedule": {
+				"start":"09:30:00",
+				"end":"12:30:00",
+				"duration":"03:00:00",
+				"recurrence": {
+					"pattern":"daily",
+					"range": {
+						"start":"01/04/2017",
+						"end":"25/04/2017"
+					}
+				}
+			},
+			"channel": [
+			{ 
+				"number":"3",
+				"type":"io",
+				"enabled":"true",
+				"action":"start"
+			},
+			{
+				"number":"33",
+				"type":"sensor",
+				"enabled":"true",
+				"action":{
+					"trigger": [
+					{
+						"trigger-value":"low",
+						"target":"control-channel",
+						"condition": {
+							"controller-status":"running",
+							"controller-elapsed":"10s"
+						}
+					}]
+				}
+			}]
+		},
+		{
+			"groupid":"2",
+			"enabled":"true",
+			"id":"2",
+			"device-action": {
+				"trigger-value":"low",
+				"sensor": {
+					"trigger":[
+					{
+						"description":"when sensor 1 goes low, trigger high on device",
+						"id":"1",
+						"group":"internal",
+						"sensor":"15",
+						"trigger-value":"low",
+						"target-value":"high"
+					},
+					{
+						"description":"desc1",
+						"id":"2",
+						"group":"internal",
+						"sensor":"2",
+						"trigger-value":"low",
+						"target-value":"high"					
+					}]
+				}	
+			},
+			"channel": [
+			{
+				"number":"5",
+				"type":"io",
+				"enabled":"true",
+				"action":"start"
+			},
+			{
+				"number":"15",
+				"type":"level",
+				"enabled":"true",
+				"action":{
+					"trigger": [
+					{
+						"trigger-value":"low",
+						"target":"control-channel",
+						"condition": {
+							"controller-status":"stopped",
+							"controller-elapsed":"10s"
+						}
+					}]
+				}
+			}]
+		}]
+	}]	
+  }	
+}
